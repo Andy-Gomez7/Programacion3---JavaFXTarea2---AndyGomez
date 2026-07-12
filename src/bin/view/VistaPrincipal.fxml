@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VistaPrincipal">
+   <children>
+      <MenuBar fx:id="MenuBar" layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu fx:id="SMenuRegistroPaq" mnemonicParsing="false" text="Registro de paquetes">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu fx:id="SMenuRegistroDest" mnemonicParsing="false" text="Registro de destinos">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu fx:id="SMenuConsultaPaq" mnemonicParsing="false" text="Consulta de paquetes">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+            <Menu fx:id="SMenuConsultaDest" mnemonicParsing="false" text="Consulta de destinos">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

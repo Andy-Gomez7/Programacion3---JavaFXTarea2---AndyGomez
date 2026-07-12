@@ -1,36 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VistaPrincipal">
    <children>
       <MenuBar fx:id="MenuBar" layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
         <menus>
-          <Menu fx:id="SMenuRegistroPaq" mnemonicParsing="false" text="Registro de paquetes">
+          <Menu fx:id="SMenuRegistro" mnemonicParsing="false" text="Registrar">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
+                  <MenuItem fx:id="itemRegPaq" mnemonicParsing="false" onAction="#AbrirRegistroPaquetes" text="Registro de paquete" />
+              <MenuItem fx:id="itemRegDest" mnemonicParsing="false" onAction="#AbrirRegistroDestinos" text="Registro de destino" />
             </items>
           </Menu>
-          <Menu fx:id="SMenuRegistroDest" mnemonicParsing="false" text="Registro de destinos">
+          <Menu fx:id="SMenuConsultar" mnemonicParsing="false" text="Consultar">
             <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
+              <MenuItem fx:id="itemConsltPaq" mnemonicParsing="false" onAction="#AbrirConsultaPaquetes" text="Consulta de paquete" />
+                  <MenuItem fx:id="ItemConsltDest" mnemonicParsing="false" onAction="#AbrirConsultaDestinos" text="Consulta de destino" />
             </items>
           </Menu>
-          <Menu fx:id="SMenuConsultaPaq" mnemonicParsing="false" text="Consulta de paquetes">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-            <Menu fx:id="SMenuConsultaDest" mnemonicParsing="false" text="Consulta de destinos">
+            <Menu fx:id="SMenuOtros" mnemonicParsing="false" text="Otros">
               <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem fx:id="ItemSalir" mnemonicParsing="false" text="Salir" />
               </items>
             </Menu>
         </menus>
       </MenuBar>
+      <Label layoutX="180.0" layoutY="188.0" text="Sistema de paquestes">
+         <font>
+            <Font name="System Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="227.0" layoutY="152.0" text="Bienvenido al">
+         <font>
+            <Font name="System Italic" size="25.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

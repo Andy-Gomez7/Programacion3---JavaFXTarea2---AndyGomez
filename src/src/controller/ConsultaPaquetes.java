@@ -1,14 +1,12 @@
 package controller;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.VBox;
-import model.Destino;
 import model.Paquete;
 import utils.ArchivoUtil;
 
@@ -37,15 +35,8 @@ public class ConsultaPaquetes {
     public void Cargar(){
         ArrayList<Paquete> paquetes = filePaq.LeerPaquete();
         ArrayList<String> StrDestinos = Convertir(paquetes);
-
-        if(!paquetes.isEmpty()){
-            ListView.getItems().addAll(StrDestinos);
-            lbMensajeUsur.setText("Paquetes cargados");    
-        }
-        else{
-            lbMensajeUsur.setText("El registro de paquetes esta vacio");
-        }
-        
+        ListView.getItems().addAll(StrDestinos);
+        lbMensajeUsur.setText("Paquetes cargados");
     }
 
     private ArrayList<String> Convertir(ArrayList<Paquete> paquetes){

@@ -39,6 +39,7 @@ public class ArchivoUtil {
         try{
             FileWriter write = new FileWriter(archivo,true);
             write.write(paquete.GetCodigo()+";"+paquete.GetDestinatario()+";"+paquete.GetPeso()+";"+paquete.GetDestino());
+            write.write("\n");
             write.close();
 
         }catch(IOException e) {

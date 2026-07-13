@@ -125,14 +125,14 @@ public class RegistroPaquetes {
 
                 }
                 Platform.runLater(() -> {
-                    lbMensajeUsur.setText("Estudiante guardado en el archivo con hilo");
+                    lbMensajeUsur.setText("Paquete guardado en el archivo con hilo");
 
                 });
             } catch (Exception e) {
-                System.out.println("Error al guardar el estudiante: " + e.getMessage());
+                System.out.println("Error al guardar el paquete: " + e.getMessage());
             } finally {
                 PBar.setProgress(0);
-                lbMensajeUsur.setText("Estudiante guardado en el archivo");
+                lbMensajeUsur.setText("Paquete guardado en el archivo");
             }
         });
 

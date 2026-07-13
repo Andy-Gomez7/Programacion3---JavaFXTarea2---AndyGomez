@@ -103,14 +103,14 @@ public class RegistroDestinos {
 
                 }
                 Platform.runLater(() -> {
-                    lbMensajeUsur.setText("Estudiante guardado en el archivo con hilo");
+                    lbMensajeUsur.setText("Destino guardado en el archivo con hilo");
 
                 });
             } catch (Exception e) {
-                System.out.println("Error al guardar el estudiante: " + e.getMessage());
+                System.out.println("Error al guardar el Destino: " + e.getMessage());
             } finally {
                 PBar.setProgress(0);
-                lbMensajeUsur.setText("Estudiante guardado en el archivo");
+                lbMensajeUsur.setText("Destino guardado en el archivo");
             }
         });
 

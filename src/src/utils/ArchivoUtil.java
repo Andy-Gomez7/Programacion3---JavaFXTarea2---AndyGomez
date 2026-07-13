@@ -21,15 +21,15 @@ public class ArchivoUtil {
 
     public void EscribirDestino(Destino destino) {
         try{
-            if(archivo.exists()){
-                FileWriter write = new FileWriter("Registro de destino.txt",true);
-                BufferedWriter bufWrite = new BufferedWriter(write);
+            
+            FileWriter write = new FileWriter(archivo,true);
+            BufferedWriter bufWrite = new BufferedWriter(write);
 
-                bufWrite.write(destino.GetNombre());
-                bufWrite.newLine();
+            bufWrite.write(destino.GetNombre());
+            bufWrite.newLine();
 
-                bufWrite.close();
-            }         
+            bufWrite.close();
+                 
         }catch(IOException e) {
             e.printStackTrace();
         }
@@ -37,22 +37,20 @@ public class ArchivoUtil {
 
     public void EscribirPaquete(Paquete paquete) {
         try{
-            if(archivo.exists()){
-                FileWriter write = new FileWriter("Registro de paquete.txt",true);
+            FileWriter write = new FileWriter(archivo,true);
+            write.write(paquete.GetCodigo()+";"+paquete.GetDestinatario()+";"+paquete.GetPeso()+";"+paquete.GetDestino());
+            write.close();
 
-                write.write(paquete.GetCodigo()+";"+paquete.GetDestinatario()+";"+paquete.GetPeso()+";"+paquete.GetDestino());
-
-                write.close();
-            }         
         }catch(IOException e) {
             e.printStackTrace();
         }
     }
 
     public ArrayList<Destino> LeerDestino(){
-           try{
-            ArrayList<Destino> destinos = new ArrayList<>();
-            FileReader read = new FileReader("Leer Registro.txt");
+        ArrayList<Destino> destinos = new ArrayList<>();
+        
+        try{
+            FileReader read = new FileReader(archivo);
             BufferedReader bufread = new BufferedReader(read);
 
             String linea;
@@ -64,21 +62,21 @@ public class ArchivoUtil {
 
             read.close();
             bufread.close();
-
-            return destinos;
             
-        }catch(Exception e){
+        }catch(IOException e){
             e.printStackTrace();
         }
 
-        return null;
+        return destinos;
     }
 
     public ArrayList<Paquete> LeerPaquete(){
-           try{
-            FileReader read = new FileReader("Leer Registro.txt");
+        ArrayList<Paquete> paquetes = new ArrayList<>();
+        
+        try{
+            FileReader read = new FileReader(archivo);
             BufferedReader bufread = new BufferedReader(read);
-            ArrayList<Paquete> paquetes = new ArrayList<>();
+            
             String[] aux;
 
             String linea;
@@ -93,13 +91,11 @@ public class ArchivoUtil {
 
             read.close();
             bufread.close();
-            
-            return paquetes;
 
-        }catch(Exception e){
+        }catch(IOException e){
             e.printStackTrace();
         }
         
-        return null;
+        return paquetes;
     }
 }

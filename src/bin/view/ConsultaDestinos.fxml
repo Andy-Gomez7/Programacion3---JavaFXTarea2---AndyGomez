@@ -32,7 +32,7 @@
             <Insets left="52.0" right="50.0" />
          </VBox.margin>
       </Label>
-      <Button fx:id="btnCargar" mnemonicParsing="false" prefHeight="30.0" prefWidth="65.0" text="Cargar">
+      <Button fx:id="btnCargar" mnemonicParsing="false" onAction="#Cargar" prefHeight="30.0" prefWidth="65.0" text="Cargar">
          <VBox.margin>
             <Insets left="130.0" right="50.0" />
          </VBox.margin>

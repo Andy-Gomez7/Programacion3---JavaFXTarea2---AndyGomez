@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistroDestinos">
+<AnchorPane fx:id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistroDestinos">
    <children>
       <Label fx:id="lbTitulo" layoutX="114.0" layoutY="14.0" prefHeight="49.0" prefWidth="179.0" text="Registro de destinos">
          <font>
@@ -19,15 +19,15 @@
       </Label>
       <TextField fx:id="txtFDestino" layoutX="120.0" layoutY="104.0" prefHeight="30.0" prefWidth="168.0" promptText="Digite un destino" />
       <ListView fx:id="ListView" layoutX="367.0" layoutY="14.0" prefHeight="372.0" prefWidth="219.0" />
-      <Label fx:id="lbMensajeUsur" alignment="CENTER" contentDisplay="TOP" layoutX="133.0" layoutY="301.0" prefHeight="30.0" prefWidth="142.0" text="Esperando..." />
+      <Label fx:id="lbMensajeUsur" alignment="CENTER" contentDisplay="TOP" layoutX="93.0" layoutY="301.0" prefHeight="30.0" prefWidth="219.0" text="Esperando..." />
       <HBox layoutX="109.0" layoutY="170.0" prefHeight="30.0" prefWidth="189.0">
          <children>
-            <Button fx:id="btnCargar" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Cargar">
+            <Button fx:id="btnCargar" mnemonicParsing="false" onAction="#Cargar" prefHeight="25.0" prefWidth="72.0" text="Cargar">
                <HBox.margin>
                   <Insets right="63.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="btnGuardar" mnemonicParsing="false" prefHeight="25.0" prefWidth="66.0" text="Guardar" />
+            <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#Guardar" prefHeight="25.0" prefWidth="66.0" text="Guardar" />
          </children>
       </HBox>
       <ProgressBar fx:id="PBar" layoutX="92.0" layoutY="251.0" prefWidth="224.0" progress="0.0" />
